@@ -1,10 +1,14 @@
 import * as React from "react";
+import { Image } from "./custom-elements/image";
+import { CardLink } from "./custom-elements/card-link";
+import { AspectRatio } from "./custom-elements/aspect-ratio";
+import { SimpleGreeting } from "./custom-elements/simple-greeting";
 
 declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "simple-greeting": { name?: string };
-      "aspect-ratio": { ratio: number; children: React.ReactNode };
-    }
+  interface HTMLElementTagNameMap {
+    "simple-greeting": SimpleGreeting;
+    "aspect-ratio": AspectRatio;
+    "card-link": CardLink;
+    image: Image;
   }
 }

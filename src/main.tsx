@@ -5,6 +5,7 @@ import Root from "$/routes/root";
 import IndexPage from "$/routes";
 import PlaygroundPage from "$/routes/playground/page";
 import AspectRatioPage from "$/routes/playground/aspect-ratio/page";
+import CardLinkPage from "$/routes/playground/card-link/page";
 import ErrorPage from "$/error";
 import "./index.css";
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "playground/aspect-ratio",
         element: <AspectRatioPage />,
+      },
+      {
+        path: "playground/card-link",
+        element: <CardLinkPage />,
       },
     ],
   },

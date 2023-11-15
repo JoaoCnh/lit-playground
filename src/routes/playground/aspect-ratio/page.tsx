@@ -1,6 +1,6 @@
 import { Image } from "$/components/Image";
 import { PageHeader } from "$/components/PageHeader";
-import "$/custom-elements/aspect-ratio";
+import { AspectRatio } from "$/components/AspectRatio";
 
 import aspectRatioImg from "$/assets/aspect-ratio.jpg";
 
@@ -31,19 +31,18 @@ export default function AspectRatioPage() {
       <ul className="mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14">
         {ratios.map((ratio) => (
           <li key={ratio.text} className="w-full h-full">
-            <aspect-ratio ratio={ratio.value}>
+            <AspectRatio ratio={ratio.value}>
               <figure className="w-full h-full">
                 <Image
                   src={aspectRatioImg}
                   alt={`${ratio.text} ratio`}
-                  className="w-full h-full object-cover"
                   sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
                 />
                 <figcaption className="mt-2 text-sm text-center text-gray-500">
                   {ratio.text}
                 </figcaption>
               </figure>
-            </aspect-ratio>
+            </AspectRatio>
           </li>
         ))}
       </ul>
