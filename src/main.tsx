@@ -6,6 +6,7 @@ import IndexPage from "$/routes";
 import PlaygroundPage from "$/routes/playground/page";
 import AspectRatioPage from "$/routes/playground/aspect-ratio/page";
 import CardLinkPage from "$/routes/playground/card-link/page";
+import AppleSequencePage from "$/routes/playground/apple-sequence/page";
 import ErrorPage from "$/error";
 import "./index.css";
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "playground/card-link",
         element: <CardLinkPage />,
+      },
+      {
+        path: "playground/apple-sequence",
+        element: <AppleSequencePage />,
       },
     ],
   },

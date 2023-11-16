@@ -97,6 +97,7 @@ export class CardLink extends LitElement {
 
   disconnectedCallback(): void {
     cancelAnimationFrame(this._animationFrame);
+    super.disconnectedCallback();
   }
 
   // Render the UI as a function of component state

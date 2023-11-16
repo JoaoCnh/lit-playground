@@ -2,8 +2,9 @@ import { Image } from "$/components/Image";
 import { CardLink } from "$/components/CardLink";
 import { AspectRatio } from "$/components/AspectRatio";
 
-import aspectRatioImg from "$/assets/aspect-ratio.jpg";
 import cardLinkImg from "$/assets/card-link.jpg";
+import aspectRatioImg from "$/assets/aspect-ratio.jpg";
+import appleSequenceImg from "$/assets/apple-sequence.jpg";
 
 const experiments = [
   {
@@ -15,6 +16,11 @@ const experiments = [
     url: "/playground/card-link",
     title: "card link",
     image: cardLinkImg,
+  },
+  {
+    url: "/playground/apple-sequence",
+    title: "apple sequence",
+    image: appleSequenceImg,
   },
 ];
 
