@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { GithubIcon } from "$/components/icons/GithubIcon";
 import { ArrowLeftIcon } from "$/components/icons/ArrowLeftIcon";
 
@@ -27,13 +28,13 @@ export const PageHeader = ({
         >
           <GithubIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600" />
         </a>
-        <a
-          href="/playground"
+        <Link
+          to="/playground"
           className="flex items-center text-zinc-500 transition group-hover:text-zinc-600 capitalize"
         >
           <ArrowLeftIcon className="h-4 w-4 md:h-6 md:w-6 mr-2 fill-zinc-500 transition group-hover:fill-zinc-600" />
           <span>go back</span>
-        </a>
+        </Link>
       </div>
     </div>
   );
