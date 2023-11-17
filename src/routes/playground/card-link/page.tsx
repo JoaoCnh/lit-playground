@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Image } from "$/components/Image";
 import { CardLink } from "$/components/CardLink";
 import { PageHeader } from "$/components/PageHeader";
@@ -12,6 +13,8 @@ const data = Array.from({ length: 10 }, (_, i) => {
 });
 
 export default function CardLinkPage() {
+  const navigate = useNavigate();
+
   return (
     <section id="aspect-ratio" className="relative isolate px-6 pt-28 lg:px-8">
       <PageHeader
@@ -21,10 +24,17 @@ export default function CardLinkPage() {
       />
 
       <ul className="mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14">
-        {data.map((item) => (
-          <li className="w-full h-full">
+        {data.map((item, idx) => (
+          <li key={idx} className="w-full h-full">
             <AspectRatio ratio={1}>
-              <CardLink title={item} href="/playground/card-link">
+              <CardLink
+                title={item}
+                href="/playground/card-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/playground/card-link");
+                }}
+              >
                 <Image
                   src={cardLinkImg}
                   sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"

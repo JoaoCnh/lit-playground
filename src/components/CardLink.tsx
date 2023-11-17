@@ -6,4 +6,7 @@ export const CardLink = createComponent({
   tagName: "card-link",
   elementClass: WCCardLink,
   react: React,
+  events: {
+    onClick: "click",
+  },
 });
